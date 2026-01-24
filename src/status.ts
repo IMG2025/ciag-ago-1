@@ -1,0 +1,6 @@
+export const EXIT_CODES = {
+  SUCCESS: 0,
+  VALIDATION_REJECTED: 10,
+  PIPELINE_ERROR: 20,
+  SYSTEM_ERROR: 30,
+} as const;

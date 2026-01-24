@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+cat > "$ROOT_DIR/src/run.ts" <<'TS'
 import fs from 'fs';
 import path from 'path';
 import { EXIT_CODES } from './status.js';
@@ -24,3 +30,7 @@ try {
   console.error('Pipeline execution failed');
   process.exit(EXIT_CODES.PIPELINE_ERROR);
 }
+TS
+
+cd "$ROOT_DIR"
+npm run build
