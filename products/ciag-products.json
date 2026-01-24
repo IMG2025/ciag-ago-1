@@ -1,0 +1,7 @@
+{
+  "tiers": [
+    { "id": "T1", "name": "Governance Diagnostic" },
+    { "id": "T2", "name": "Operating Blueprint" },
+    { "id": "T3", "name": "Pilot / POC Advisory" }
+  ]
+}
