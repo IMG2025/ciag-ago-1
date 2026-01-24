@@ -1,7 +1,11 @@
 # Governance Gap Map
-**Engagement Tier:** T1 – Governance Diagnostic  
-**Purpose:** Identify structural, authority, and control gaps that materially impair execution.
+**Client:** {{COMPANY_NAME}}  
+**Industry:** {{INDUSTRY}} | **Employees:** {{EMPLOYEES}} | **Revenue Range:** {{REVENUE_RANGE}}  
+**Objective:** {{OBJECTIVE_PRIMARY}} | **Timeline (months):** {{TIMELINE_MONTHS}}  
+**Budget (USD):** {{BUDGET_USD}} | **Regulatory:** {{REGULATORY}}  
+**Tier:** {{TIER}} | **Run Date:** {{RUN_DATE}}
 
+---
 ## Identified Gaps
 | Area | Observed State | Required State | Risk Level |
 |-----|---------------|----------------|------------|

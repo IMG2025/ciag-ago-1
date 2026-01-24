@@ -1,4 +1,4 @@
-# Build-Deferral Flags
+# AI / Automation Architecture
 **Client:** {{COMPANY_NAME}}  
 **Industry:** {{INDUSTRY}} | **Employees:** {{EMPLOYEES}} | **Revenue Range:** {{REVENUE_RANGE}}  
 **Objective:** {{OBJECTIVE_PRIMARY}} | **Timeline (months):** {{TIMELINE_MONTHS}}  
@@ -6,11 +6,13 @@
 **Tier:** {{TIER}} | **Run Date:** {{RUN_DATE}}
 
 ---
-## Mandatory Deferrals
-The following conditions require remediation before any build activity:
-- Undefined decision authority
-- Absent governance controls
-- Unvalidated economic model
+## Scope
+Logical architecture for governed AI and automation systems.
 
-## Advisory Position
-System construction prior to remediation is not recommended and will not be supported.
+## Layers
+- Governance & controls
+- Orchestration
+- Execution agents
+
+## Constraints
+No autonomous execution without explicit control boundaries.

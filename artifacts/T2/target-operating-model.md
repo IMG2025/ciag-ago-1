@@ -1,4 +1,4 @@
-# Build-Deferral Flags
+# Target Operating Model
 **Client:** {{COMPANY_NAME}}  
 **Industry:** {{INDUSTRY}} | **Employees:** {{EMPLOYEES}} | **Revenue Range:** {{REVENUE_RANGE}}  
 **Objective:** {{OBJECTIVE_PRIMARY}} | **Timeline (months):** {{TIMELINE_MONTHS}}  
@@ -6,11 +6,13 @@
 **Tier:** {{TIER}} | **Run Date:** {{RUN_DATE}}
 
 ---
-## Mandatory Deferrals
-The following conditions require remediation before any build activity:
-- Undefined decision authority
-- Absent governance controls
-- Unvalidated economic model
+## Objective
+Define the future-state operating model required to support governed execution.
+
+## Core Components
+- Decision authority map
+- Process ownership model
+- Control enforcement points
 
 ## Advisory Position
-System construction prior to remediation is not recommended and will not be supported.
+This model is mandatory prior to automation or agent deployment.

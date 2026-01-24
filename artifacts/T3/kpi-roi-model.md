@@ -1,4 +1,4 @@
-# Build-Deferral Flags
+# KPI & ROI Model
 **Client:** {{COMPANY_NAME}}  
 **Industry:** {{INDUSTRY}} | **Employees:** {{EMPLOYEES}} | **Revenue Range:** {{REVENUE_RANGE}}  
 **Objective:** {{OBJECTIVE_PRIMARY}} | **Timeline (months):** {{TIMELINE_MONTHS}}  
@@ -6,11 +6,10 @@
 **Tier:** {{TIER}} | **Run Date:** {{RUN_DATE}}
 
 ---
-## Mandatory Deferrals
-The following conditions require remediation before any build activity:
-- Undefined decision authority
-- Absent governance controls
-- Unvalidated economic model
+## Metrics
+- Cost reduction
+- Cycle time
+- Risk exposure
 
 ## Advisory Position
-System construction prior to remediation is not recommended and will not be supported.
+ROI must be validated prior to scale.

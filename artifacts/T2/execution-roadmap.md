@@ -1,4 +1,4 @@
-# Build-Deferral Flags
+# 12-Month Execution Roadmap
 **Client:** {{COMPANY_NAME}}  
 **Industry:** {{INDUSTRY}} | **Employees:** {{EMPLOYEES}} | **Revenue Range:** {{REVENUE_RANGE}}  
 **Objective:** {{OBJECTIVE_PRIMARY}} | **Timeline (months):** {{TIMELINE_MONTHS}}  
@@ -6,11 +6,10 @@
 **Tier:** {{TIER}} | **Run Date:** {{RUN_DATE}}
 
 ---
-## Mandatory Deferrals
-The following conditions require remediation before any build activity:
-- Undefined decision authority
-- Absent governance controls
-- Unvalidated economic model
+## Phases
+1. Governance remediation
+2. Process stabilization
+3. Controlled automation
 
-## Advisory Position
-System construction prior to remediation is not recommended and will not be supported.
+## Exit Criteria
+Readiness for pilot deployment.

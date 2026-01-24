@@ -1,6 +1,11 @@
 # System Readiness Scorecard
-**Engagement Tier:** T1 – Governance Diagnostic
+**Client:** {{COMPANY_NAME}}  
+**Industry:** {{INDUSTRY}} | **Employees:** {{EMPLOYEES}} | **Revenue Range:** {{REVENUE_RANGE}}  
+**Objective:** {{OBJECTIVE_PRIMARY}} | **Timeline (months):** {{TIMELINE_MONTHS}}  
+**Budget (USD):** {{BUDGET_USD}} | **Regulatory:** {{REGULATORY}}  
+**Tier:** {{TIER}} | **Run Date:** {{RUN_DATE}}
 
+---
 ## Dimension Scores (0–5)
 | Dimension | Score | Notes |
 |---------|-------|-------|
