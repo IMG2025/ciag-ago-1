@@ -1,0 +1,20 @@
+{
+  "company": {
+    "name": "SampleCo",
+    "industry": "SaaS",
+    "employees": 10,
+    "revenue_range": "<1M"
+  },
+  "founder": {
+    "role": "CEO",
+    "decision_authority": true
+  },
+  "objectives": {
+    "primary": "Governance diagnostic",
+    "timeline_months": 12
+  },
+  "constraints": {
+    "budget_usd": 5000,
+    "regulatory": []
+  }
+}
