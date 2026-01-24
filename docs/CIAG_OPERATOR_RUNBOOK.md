@@ -222,3 +222,26 @@ and ongoing consulting.
 ### Revisions
 One constrained revision is permitted. Additional changes
 require a new intake and tier evaluation.
+
+## Appendix C: Pilot Launch Playbook
+
+CIAG pilots are governed, limited, and policy-bound.
+
+### Objectives
+Pilots validate system behavior, delivery clarity, and audit integrity.
+
+### Eligibility
+Pilot clients must accept fixed scope, pricing, and process.
+
+### Limits
+A maximum of five pilots may be conducted, with no more than two concurrent.
+
+### Execution
+Pilots run on frozen policy versions. No draft or experimental code is permitted.
+
+### Feedback
+Feedback is collected post-delivery and does not alter in-flight pilots.
+
+### Exit
+Pilots conclude upon delivery confirmation, feedback capture,
+and audit review.
