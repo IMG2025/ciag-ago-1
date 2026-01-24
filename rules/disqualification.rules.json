@@ -1,0 +1,5 @@
+{
+  "minimum_budget_usd": 2500,
+  "requires_decision_author": true,
+  "max_timeline_months": 24
+}
