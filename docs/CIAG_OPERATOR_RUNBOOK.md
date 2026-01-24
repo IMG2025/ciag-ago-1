@@ -198,3 +198,27 @@ No action is required from you at this time.
 
 — CoreIdentity Advisory Group
 
+
+## Appendix B: Pricing & Commercial Terms
+
+CIAG pricing is deterministic, tier-bound, and non-negotiable.
+
+### Tier Pricing
+T1: $2,500 — Governance Diagnostic  
+T2: $7,500 — Operating Blueprint  
+T3: $15,000 — Pilot Architecture & Transition
+
+### Payment
+Payment is required prior to execution. No work begins until payment clears.
+
+### Refunds
+Rejected or undelivered engagements are refundable.
+Delivered advisory packages are non-refundable.
+
+### Scope
+CIAG advisory excludes implementation, custom development,
+and ongoing consulting.
+
+### Revisions
+One constrained revision is permitted. Additional changes
+require a new intake and tier evaluation.
