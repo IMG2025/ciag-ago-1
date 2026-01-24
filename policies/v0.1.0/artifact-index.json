@@ -1,0 +1,20 @@
+{
+  "T1": [
+    "governance-gap-map.md",
+    "readiness-scorecard.md",
+    "risk-drift-register.md",
+    "build-deferral-flags.md"
+  ],
+  "T2": [
+    "target-operating-model.md",
+    "ai-architecture.md",
+    "governance-controls.md",
+    "execution-roadmap.md"
+  ],
+  "T3": [
+    "agent-architecture.md",
+    "workflow-spec.md",
+    "kpi-roi-model.md",
+    "platform-transition.md"
+  ]
+}
