@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+cat > "$ROOT_DIR/src/pipeline/runPipeline.ts" <<'TS'
 import fs from 'fs';
 import path from 'path';
 import { validateIntake } from '../intake/validateIntake.js';
@@ -40,3 +46,7 @@ for (const artifact of artifactIndex[tier]) {
 packageOutput(outputDir, intake, tier);
 
 console.log(JSON.stringify({ accepted: true, tier, outputDir }, null, 2));
+TS
+
+cd "$ROOT_DIR"
+npm run build
