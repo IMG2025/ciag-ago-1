@@ -1,0 +1,20 @@
+{
+  "company": {
+    "name": "BlueprintCo",
+    "industry": "Healthcare",
+    "employees": 50,
+    "revenue_range": "1–5M"
+  },
+  "founder": {
+    "role": "COO",
+    "decision_authority": true
+  },
+  "objectives": {
+    "primary": "Operating blueprint",
+    "timeline_months": 12
+  },
+  "constraints": {
+    "budget_usd": 15000,
+    "regulatory": ["HIPAA"]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "company": {
+    "name": "PilotCo",
+    "industry": "Finance",
+    "employees": 200,
+    "revenue_range": "10M+"
+  },
+  "founder": {
+    "role": "CTO",
+    "decision_authority": true
+  },
+  "objectives": {
+    "primary": "Pilot autonomous agent",
+    "timeline_months": 6
+  },
+  "constraints": {
+    "budget_usd": 50000,
+    "regulatory": ["SOX"]
+  }
+}
