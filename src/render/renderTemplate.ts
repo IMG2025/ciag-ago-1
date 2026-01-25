@@ -5,7 +5,7 @@ export function renderTemplate(template: string, tokens: TokenMap): string {
 
   for (const [key, value] of Object.entries(tokens)) {
     const pattern = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
-    out = out.replace(pattern, value);
+    out = out.replace(pattern as string | RegExp, value as string);
   }
 
   // Hard gate: no unresolved tokens allowed
