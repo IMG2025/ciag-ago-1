@@ -29,5 +29,8 @@
       "import": "./dist/executor.js",
       "types": "./dist/executor.d.ts"
     }
+  },
+  "dependencies": {
+    "ago-1-core": "github:IMG2025/ago-1-core#master"
   }
 }
