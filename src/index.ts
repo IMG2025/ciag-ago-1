@@ -11,6 +11,6 @@ export type PluginRegistrar<TSpec = unknown> = {
 import { ciagExecutorSpec } from "./executor.js";
 
 /** Public registrar used by CHC Ops to mount CIAG into the executor registry. */
-export function registerCIAG(reg: PluginRegistrar<typeof ciagExecutorSpec>): void {
+export function registerCIAG(reg: { registerExecutor: (spec: any) => void }): void {
   reg.registerExecutor(ciagExecutorSpec);
 }

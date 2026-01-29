@@ -6,11 +6,14 @@
 export const ciagExecutorSpec = {
   domain_id: "ciag",
   executor_id: "ciag.executor",
-  supported_task_types: ["EXECUTE", "ANALYZE"] as const,
+  supported_task_types: ["EXECUTE", "ANALYZE", "ESCALATE"] as const,
+  
   required_scopes: {
     EXECUTE: ["ciag:execute"],
-    ANALYZE: ["ciag:analyze"]
+    ANALYZE: ["ciag:analyze"],
+    ESCALATE: ["ciag:escalate"],
   },
+
   validate_inputs(raw: unknown) {
     return raw;
   },
