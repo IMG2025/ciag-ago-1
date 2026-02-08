@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Patch: Add Tier-1 contract note to README (CIAG)
+ * Patch: Add Tier-1 intake contract note to README (CIAG)
  * Idempotent. Ends with: npm run build
  */
 import fs from "node:fs";
