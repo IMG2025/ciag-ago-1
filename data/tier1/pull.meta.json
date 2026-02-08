@@ -1,0 +1,14 @@
+{
+  "pulled_at": "2026-02-08T18:33:09.156Z",
+  "source": {
+    "owner": "IMG2025",
+    "repo": "ago-tier1-engine",
+    "branch": "main",
+    "base_url": "https://raw.githubusercontent.com/IMG2025/ago-tier1-engine/main/exports/tier1"
+  },
+  "files": [
+    "tier1.csv",
+    "evidence.manifest.json",
+    "meta.json"
+  ]
+}

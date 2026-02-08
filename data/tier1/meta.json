@@ -1,0 +1,12 @@
+{
+  "contract": "ago-tier1-export@v1",
+  "generated_at": "2026-02-08T18:32:28.401Z",
+  "source": {
+    "repo": "git@github.com:IMG2025/ago-tier1-engine.git",
+    "commit": "b2d783781de1fdc0f48feea63803b7109bf4fac9"
+  },
+  "artifacts": [
+    "tier1.csv",
+    "evidence.manifest.json"
+  ]
+}
