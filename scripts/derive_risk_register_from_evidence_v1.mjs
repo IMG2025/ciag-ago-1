@@ -12,9 +12,16 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 
-function headerIndex(header, name) {
-  const key = String(name || "").trim().toLowerCase();
-  return header.findIndex(h => String(h).trim().toLowerCase() === key);
+function headerIndex(header, key) {
+  // Force header to array if a CSV line slipped through
+  if (typeof header === "string") {
+    header = header.split(",").map(h => h.trim());
+  }
+  if (!Array.isArray(header)) {
+    throw new Error("headerIndex: header is not array after normalization");
+  }
+  const k = String(key || "").trim().toLowerCase();
+  return header.findIndex(h => String(h).trim().toLowerCase() === k);
 }
 function getSystemTypeFromRow(header, cols) {
   const idx = headerIndex(header, "system_type");
