@@ -1,0 +1,26 @@
+{
+  "id": "governance_policy_threshold_v1",
+  "version": "1.0.0",
+  "type": "evidence_threshold",
+  "description": "Mitigate system-scoped risks only when observed evidence meets a minimum confidence threshold.",
+  "threshold": {
+    "minConfidence": 7,
+    "requiredStatus": "observed"
+  },
+  "mapping": {
+    "onMitigate": {
+      "status": "Mitigated",
+      "likelihood": "Low",
+      "notesTag": "policy=threshold-v1"
+    }
+  },
+  "inputs": {
+    "operatorSelected": ".ago/operator_selected.json",
+    "evidenceJson": "docs/triage/TRG-<operator_slug>/evidence.json",
+    "riskRegisterCsv": "docs/triage/TRG-<operator_slug>/risk-register.csv"
+  },
+  "guardrails": {
+    "failClosed": true,
+    "doNotMutateIfMissingInputs": true
+  }
+}
