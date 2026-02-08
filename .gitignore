@@ -1,4 +1,2 @@
-dist/
-output/
-audit/*.jsonl
-*.log
+# Runtime outputs
+out/
