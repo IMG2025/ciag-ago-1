@@ -1,0 +1,30 @@
+{
+  "operator": {
+    "name": "Cole Hospitality",
+    "slug": "cole-hospitality",
+    "locations": 70,
+    "confidence_score": 10,
+    "priority": "Immediate",
+    "outreach_status": "simulation-pin"
+  },
+  "selected": {
+    "source": ".ago/operator_selected.json",
+    "rank": 1,
+    "operator_name": "Cole Hospitality",
+    "operator_slug": "cole-hospitality",
+    "locations": 70,
+    "composite_score": null,
+    "confidence_score": 10,
+    "priority": "Immediate",
+    "outreach_status": "simulation-pin",
+    "provenance": {
+      "source": "operator_override.json"
+    }
+  },
+  "provenance": {
+    "source": "operator_override.json"
+  },
+  "evidence": {
+    "items": []
+  }
+}

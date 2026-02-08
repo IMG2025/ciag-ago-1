@@ -1,0 +1,2 @@
+risk_id,title,category,severity,likelihood,status,owner,evidence_refs,notes
+R-001,Unknown AI usage scope,Discovery,High,Medium,Open,CIAG,[],Inventory AI-enabled tools and workflows
