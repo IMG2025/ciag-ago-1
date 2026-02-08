@@ -8,10 +8,16 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 
-const operator = process.argv[2];
-if(!operator) throw new Error("Usage: node generate_triage_scaffold_v1.mjs <operator>");
 
-function run(cmd){ execSync(cmd,{stdio:"inherit"}); }
+const arg = process.argv[2];
+let operator = arg;
+
+if(!operator){
+  const sel = path.join(process.cwd(),"out","operator.selected.json");
+  if(!fs.existsSync(sel)) throw new Error("Missing operator (arg or out/operator.selected.json)");
+  operator = JSON.parse(read(sel)).slug;
+}
+
 function mkdir(p){ fs.mkdirSync(p,{recursive:true}); }
 
 const ROOT = process.cwd();
