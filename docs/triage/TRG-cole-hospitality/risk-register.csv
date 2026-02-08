@@ -1,2 +1,9 @@
-risk_id,title,category,severity,likelihood,status,owner,evidence_refs,notes
-R-001,Unknown AI usage scope,Discovery,High,Medium,Open,CIAG,[],Inventory AI-enabled tools and workflows
+risk_id,title,system_type,category,severity,likelihood,status,owner,evidence_refs,notes
+R-001,Unknown AI usage scope,,Discovery,High,Medium,Open,CIAG,[],Inventory AI-enabled tools and workflows
+R-SYS-PMS,PMS governance coverage unknown,PMS,Discovery,Medium,Medium,Open,CIAG,[],
+R-SYS-POS,POS governance coverage unknown,POS,Discovery,Medium,Medium,Open,CIAG,[],
+R-SYS-HRIS,HRIS governance coverage unknown,HRIS,Discovery,Medium,Medium,Open,CIAG,[],
+R-SYS-WFM,WFM governance coverage unknown,WFM,Discovery,Medium,Medium,Open,CIAG,[],
+R-SYS-SCHEDULING,Scheduling governance coverage unknown,Scheduling,Discovery,Medium,Medium,Open,CIAG,[],
+R-SYS-PAYMENTS,Payments governance coverage unknown,Payments,Discovery,High,Medium,Open,CIAG,[],
+R-SYS-OTHER,Other governance coverage unknown,Other,Discovery,Medium,Medium,Open,CIAG,[],

@@ -12,6 +12,17 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 
+function headerIndex(header, name) {
+  const key = String(name || "").trim().toLowerCase();
+  return header.findIndex(h => String(h).trim().toLowerCase() === key);
+}
+function getSystemTypeFromRow(header, cols) {
+  const idx = headerIndex(header, "system_type");
+  const idx2 = headerIndex(header, "systemType");
+  const at = idx >= 0 ? idx : idx2;
+  return at >= 0 ? (cols[at] || "").trim() : "";
+}
+
 function run(cmd) { execSync(cmd, { stdio: "inherit" }); }
 function read(p) { return fs.readFileSync(p, "utf8"); }
 function exists(p) { return fs.existsSync(p); }
@@ -52,7 +63,7 @@ const out = [header];
 
 for (const line of rows.slice(1)) {
   const cols = line.split(",");
-  const systemType = cols[1]; // assumes column 2 = systemType
+  const systemType = getSystemTypeFromRow(header, cols); // assumes column 2 = systemType
   const ev = evidenceBySystem[systemType];
 
   if (ev && ev.status === "observed") {
