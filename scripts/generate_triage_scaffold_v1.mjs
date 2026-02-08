@@ -8,6 +8,7 @@ import fs from "node:fs";
 const read = (p) => fs.readFileSync(p, "utf8");
 import path from "node:path";
 import { execSync } from "node:child_process";
+const run = (cmd) => execSync(cmd, { stdio: "inherit" });
 
 
 const arg = process.argv[2];
