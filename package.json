@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "ago": "node dist/src/index.js",
-    "test": "npm run build && ./scripts/audit_ciag_dist_importable_v1.sh"
+    "test": "npm run build && ./scripts/audit_ciag_dist_importable_v1.sh",
+    "ciag:queue": "node scripts/generate_outreach_queue_from_tier1_v1.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
