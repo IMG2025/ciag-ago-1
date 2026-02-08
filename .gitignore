@@ -1,2 +1,10 @@
-# Runtime outputs
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
 out/
+output/
+
+# Nested build artifacts (safety)
+**/dist/
