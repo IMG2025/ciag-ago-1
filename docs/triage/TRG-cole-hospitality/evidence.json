@@ -1,30 +1,207 @@
 {
+  "schemaVersion": "evidence.v1",
   "operator": {
     "name": "Cole Hospitality",
     "slug": "cole-hospitality",
-    "locations": 70,
-    "confidence_score": 10,
-    "priority": "Immediate",
-    "outreach_status": "simulation-pin"
+    "locations": 70
   },
-  "selected": {
-    "source": ".ago/operator_selected.json",
-    "rank": 1,
-    "operator_name": "Cole Hospitality",
-    "operator_slug": "cole-hospitality",
-    "locations": 70,
-    "composite_score": null,
-    "confidence_score": 10,
-    "priority": "Immediate",
-    "outreach_status": "simulation-pin",
+  "meta": {
+    "createdAt": "2026-02-08T23:09:18.439Z",
+    "updatedAt": "2026-02-08T23:09:18.439Z",
     "provenance": {
-      "source": "operator_override.json"
+      "selectedOperatorPath": ".ago/operator_selected.json",
+      "generator": "scripts/seed_evidence_for_selected_operator_v1.mjs"
     }
   },
-  "provenance": {
-    "source": "operator_override.json"
-  },
-  "evidence": {
-    "items": []
-  }
+  "items": [
+    {
+      "id": "4cdd35eeae14573e8f4c10a8222a47925ddfb5d3",
+      "category": "core_systems",
+      "systemType": "PMS",
+      "vendor": null,
+      "product": null,
+      "claim": "PMS vendor/product not yet evidenced",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Fill with authoritative vendor evidence (contract, vendor portal, or operator confirmation).",
+      "tags": [
+        "tier1",
+        "system"
+      ]
+    },
+    {
+      "id": "39294f3795d8a947842528bc0ccb5112d535d84f",
+      "category": "core_systems",
+      "systemType": "POS",
+      "vendor": null,
+      "product": null,
+      "claim": "POS vendor/product not yet evidenced",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "If hotels: confirm POS presence; if limited-service may be minimal.",
+      "tags": [
+        "tier1",
+        "system"
+      ]
+    },
+    {
+      "id": "9449cf6ba42e59ef1309a8a194ab30990f0d20e3",
+      "category": "core_systems",
+      "systemType": "HRIS",
+      "vendor": null,
+      "product": null,
+      "claim": "HRIS vendor/product not yet evidenced",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Capture HRIS and payroll adjacency.",
+      "tags": [
+        "workforce",
+        "system"
+      ]
+    },
+    {
+      "id": "cf7eea5bc0d78b0258b8fb5a1f5fe3976000695c",
+      "category": "core_systems",
+      "systemType": "WFM",
+      "vendor": null,
+      "product": null,
+      "claim": "Workforce/WFM vendor not yet evidenced",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Scheduling/labor optimization is a primary AI surface in hospitality.",
+      "tags": [
+        "workforce",
+        "system"
+      ]
+    },
+    {
+      "id": "8633cb443b97b4305756faf6ec55a4aa9cacef3f",
+      "category": "core_systems",
+      "systemType": "Scheduling",
+      "vendor": null,
+      "product": null,
+      "claim": "Scheduling tool not yet evidenced",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Often overlaps with WFM; confirm toolchain.",
+      "tags": [
+        "workforce",
+        "system"
+      ]
+    },
+    {
+      "id": "428407cb031c83cd8c1caf956bad9a91da91effd",
+      "category": "core_systems",
+      "systemType": "Payments",
+      "vendor": null,
+      "product": null,
+      "claim": "Payment processor not yet evidenced",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "PCI adjacency; confirm processor + gateway + PMS integration.",
+      "tags": [
+        "pci",
+        "system"
+      ]
+    },
+    {
+      "id": "bbfe83a45773950f79bb1586b35bde728cb7ed47",
+      "category": "ai_exposure",
+      "systemType": "Other",
+      "vendor": null,
+      "product": null,
+      "claim": "AI-enabled vendor features not yet enumerated",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Examples: fraud detection, dynamic pricing, resume screening, forecasting.",
+      "tags": [
+        "ai",
+        "exposure"
+      ]
+    },
+    {
+      "id": "80c56547c4a6031deb3a79217e31bc219cc1ab79",
+      "category": "compliance_surface",
+      "systemType": "Payments",
+      "vendor": null,
+      "product": null,
+      "claim": "PCI scope/adjacency not yet mapped",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Determine card data environment boundaries and service providers.",
+      "tags": [
+        "pci",
+        "compliance"
+      ]
+    },
+    {
+      "id": "039a4ce70add51425c78378ba7d1fbb32b6fbf47",
+      "category": "data_categories",
+      "systemType": "HRIS",
+      "vendor": null,
+      "product": null,
+      "claim": "PII categories processed not yet enumerated",
+      "evidenceType": "unknown",
+      "source": {
+        "url": null,
+        "ref": null,
+        "capturedAt": "2026-02-08T23:09:18.439Z"
+      },
+      "confidence": 0,
+      "status": "missing",
+      "notes": "Payroll, SSN, contact info, scheduling data, performance notes.",
+      "tags": [
+        "pii",
+        "data"
+      ]
+    }
+  ]
 }
