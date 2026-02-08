@@ -5,6 +5,7 @@
  * Idempotent. Ends with npm run build
  */
 import fs from "node:fs";
+const read = (p) => fs.readFileSync(p, "utf8");
 import path from "node:path";
 import { execSync } from "node:child_process";
 
