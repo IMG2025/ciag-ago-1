@@ -8,3 +8,10 @@ output/
 
 # Nested build artifacts (safety)
 **/dist/
+# --- CIAG-AGO-1 runtime artifacts (generated) ---
+.ago/
+data/operator_override.json
+docs/intake/
+docs/triage/TRG-*/
+
+# --- deps ---
