@@ -9,6 +9,9 @@
     "ciag:e2e": "node scripts/ciag_e2e_from_fixture_v1.mjs fixtures/customers/cole-hospitality.sample.json",
     "ciag:policy": "node scripts/apply_policy_to_risk_register_v1.mjs",
     "ciag:recommendation": "node scripts/generate_recommendation_from_risk_register_v1.mjs",
-    "ciag:intake": "node scripts/generate_pilot_intake_pack_for_selected_operator_v1.mjs"
+    "ciag:intake": "node scripts/generate_pilot_intake_pack_for_selected_operator_v1.mjs",
+    "ciag:intake:template": "node scripts/generate_pilot_intake_response_template_v1.mjs",
+    "ciag:intake:apply": "node scripts/apply_intake_response_to_evidence_v1.mjs",
+    "ciag:closure": "node scripts/ciag_closure_loop_from_intake_v1.mjs"
   }
 }
