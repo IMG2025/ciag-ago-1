@@ -5,38 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "ago": "node dist/src/index.js",
-    "test": "npm run build && ./scripts/audit_ciag_dist_importable_v1.sh",
-    "ciag:queue": "node scripts/generate_outreach_queue_from_tier1_v1.mjs",
-    "ciag:packs": "node scripts/generate_outreach_packets_from_tier1_v1.mjs",
-    "ciag:triage": "node scripts/seed_triage_from_selected_operator_v1.mjs",
-    "ciag:evidence": "node scripts/seed_evidence_for_selected_operator_v1.mjs",
+    "ciag:triage": "node scripts/ciag_triage_from_selected_operator_v1.mjs",
+    "ciag:e2e": "node scripts/ciag_e2e_from_fixture_v1.mjs fixtures/customers/cole-hospitality.sample.json",
     "ciag:policy": "node scripts/apply_policy_to_risk_register_v1.mjs",
-    "ciag:recommendation": "node scripts/generate_recommendation_from_risk_register_v1.mjs"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.0.0",
-    "@types/node": "^22.0.0",
-    "eslint": "^9.0.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.0.0",
-    "typescript-eslint": "^8.0.0"
-  },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./executor": {
-      "import": "./dist/executor.js",
-      "types": "./dist/executor.d.ts"
-    }
-  },
-  "dependencies": {
-    "ago-1-core": "github:IMG2025/ago-1-core#master"
+    "ciag:recommendation": "node scripts/generate_recommendation_from_risk_register_v1.mjs",
+    "ciag:intake": "node scripts/generate_pilot_intake_pack_for_selected_operator_v1.mjs"
   }
 }
