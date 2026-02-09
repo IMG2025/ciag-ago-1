@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "schema": "ciag-intake-v1",
+    "slug": "cole-hospitality",
+    "operator_name": "Cole Hospitality",
+    "locations": 70,
+    "generatedAt": "2026-02-09T00:14:46.392Z"
+  },
+  "systems": [
+    {
+      "systemType": "PMS",
+      "vendor": "",
+      "product": "",
+      "notes": ""
+    },
+    {
+      "systemType": "Payments",
+      "vendor": "",
+      "product": "",
+      "pci_scope": "unknown",
+      "notes": ""
+    },
+    {
+      "systemType": "POS",
+      "vendor": "",
+      "product": "",
+      "notes": ""
+    },
+    {
+      "systemType": "HRIS",
+      "vendor": "",
+      "product": "",
+      "notes": ""
+    },
+    {
+      "systemType": "WFM",
+      "vendor": "",
+      "product": "",
+      "notes": ""
+    },
+    {
+      "systemType": "Scheduling",
+      "vendor": "",
+      "product": "",
+      "notes": ""
+    },
+    {
+      "systemType": "Other",
+      "vendor": "",
+      "product": "",
+      "notes": ""
+    }
+  ],
+  "ai_usage_inventory": {
+    "blocker_r001_complete": false,
+    "notes": ""
+  }
+}

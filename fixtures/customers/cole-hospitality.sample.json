@@ -1,0 +1,24 @@
+{
+  "operator": {
+    "operator_name": "Cole Hospitality",
+    "operator_slug": "cole-hospitality",
+    "locations": 70,
+    "confidence_score": 10,
+    "priority": "Immediate",
+    "outreach_status": "simulation-pin"
+  },
+  "systems": {
+    "PMS": { "vendor": "Cloudbeds", "product": "Cloudbeds PMS" },
+    "Payments": { "vendor": "Toast", "product": "Toast Payments" },
+    "POS": { "vendor": null, "product": null },
+    "HRIS": { "vendor": null, "product": null },
+    "WFM": { "vendor": null, "product": null },
+    "Scheduling": { "vendor": null, "product": null },
+    "Other": { "vendor": null, "product": null }
+  },
+  "notes": {
+    "source": "CIAG pilot simulation",
+    "capturedBy": "CIAG",
+    "capturedAt": null
+  }
+}

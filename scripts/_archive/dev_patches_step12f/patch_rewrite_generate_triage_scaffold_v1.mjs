@@ -1,4 +1,27 @@
 #!/usr/bin/env node
+/**
+ * Canonical rewrite of generate_triage_scaffold_v1.mjs
+ * - ESM-safe (shebang at top)
+ * - Reads ONLY .ago/operator_selected.json
+ * - Fails closed if operator missing
+ * - Deletes TRG-undefined deterministically
+ * - Idempotent
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { execSync } from "node:child_process";
+
+function run(cmd){ execSync(cmd, { stdio: "inherit" }); }
+function read(p){ return fs.readFileSync(p, "utf8"); }
+function exists(p){ return fs.existsSync(p); }
+function mkdir(p){ fs.mkdirSync(p, { recursive: true }); }
+
+const ROOT = execSync("git rev-parse --show-toplevel", { encoding: "utf8" }).trim();
+process.chdir(ROOT);
+
+const TARGET = path.join("scripts","generate_triage_scaffold_v1.mjs");
+
+const SRC = `#!/usr/bin/env node
 import fs from "node:fs";
 import path from "node:path";
 
@@ -39,7 +62,7 @@ if(!slug){
 }
 
 const TRIAGE_ROOT = path.join(ROOT,"docs","triage");
-const DIR = path.join(TRIAGE_ROOT,`TRG-${slug}`);
+const DIR = path.join(TRIAGE_ROOT,\`TRG-\${slug}\`);
 
 mkdir(DIR);
 
@@ -63,3 +86,8 @@ if(exists(BAD)){
 }
 
 console.log("Triage scaffold ready:", DIR);
+`;
+
+fs.writeFileSync(TARGET, SRC, { mode: 0o755 });
+
+run("npm run build");
