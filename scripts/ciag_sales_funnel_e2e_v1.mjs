@@ -62,6 +62,9 @@ const chosen = args.slug
 
 if (!chosen) throw new Error("Operator not found");
 
+const tier1Path = args?.tier1 ?? args?.["--tier1"] ?? null;
+const intakePath = args?.intake ?? args?.["--intake"] ?? null;
+
 const slug = normalizeSlug(chosen.slug || chosen.operator || chosen.company);
 const OUT = path.join("out", "reach", slug);
 
@@ -75,4 +78,17 @@ if (args.intake) {
 }
 
 run("npm run build");
+
+// Step 13B: write audit manifest (non-destructive, deterministic)
+try {
+  const args = [];
+  args.push("--slug", slug);
+  if (tier1Path) args.push("--tier1", tier1Path);
+  if (intakePath) args.push("--intake", intakePath);
+  run(`node scripts/generate_run_manifest_v1.mjs ${args.map(x=>String(x)).join(" ")}`);
+} catch (e) {
+  // Manifest is audit support; do not fail the pipeline on manifest write.
+  console.warn("WARN: manifest write failed:", e?.message ?? e);
+}
+
 console.log("Sales Funnel E2E complete:", OUT);
