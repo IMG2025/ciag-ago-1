@@ -7,6 +7,34 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 
+function resolveLocationsFromPrequal(slug) {
+  const pq = path.join("out", "reach", slug, "prequal.json");
+  if (!fs.existsSync(pq)) return null;
+  try {
+    const j = JSON.parse(fs.readFileSync(pq, "utf8"));
+    const n = j?.locations ?? j?.reported_locations ?? j?.reportedLocations;
+    return Number.isFinite(n) ? n : null;
+  } catch {
+    return null;
+  }
+}
+
+function patchPilotRunbookLocations(slug) {
+  const loc = resolveLocationsFromPrequal(slug);
+  if (!Number.isFinite(loc)) return { patched: false, reason: "locations_unavailable" };
+
+  const rb = path.join("docs", "triage", "TRG-" + slug, "pilot-runbook.md");
+  if (!fs.existsSync(rb)) return { patched: false, reason: "runbook_missing" };
+
+  let md = fs.readFileSync(rb, "utf8");
+  if (!md.includes("**Locations:** null")) return { patched: false, reason: "already_set" };
+
+  md = md.replace("**Locations:** null", "**Locations:** " + String(loc));
+  fs.writeFileSync(rb, md);
+  return { patched: true, locations: loc };
+}
+
+
 function run(cmd) { execSync(cmd, { stdio: "inherit" }); }
 function exists(p) { return fs.existsSync(p); }
 function readJson(p) { return JSON.parse(fs.readFileSync(p, "utf8")); }
