@@ -17,6 +17,7 @@
     "ciag:sales-funnel-e2e": "node scripts/ciag_sales_funnel_e2e_v1.mjs",
     "ciag:sales-funnel-smoke": "node scripts/ciag_sales_funnel_smoke_v1.mjs",
     "ciag:validate-manifest": "node scripts/ciag_validate_manifest_v1.mjs",
-    "ciag:golden-path": "node scripts/ciag_golden_path_v1.mjs"
+    "ciag:golden-path": "node scripts/ciag_golden_path_v1.mjs",
+    "ciag:cleanup": "node scripts/patch_step16c_cleanup_stray_v1_patch_v1.mjs"
   }
 }
