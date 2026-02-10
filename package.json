@@ -13,6 +13,9 @@
     "ciag:intake:template": "node scripts/generate_pilot_intake_response_template_v1.mjs",
     "ciag:intake:apply": "node scripts/apply_intake_response_to_evidence_v1.mjs",
     "ciag:closure": "node scripts/ciag_closure_loop_from_intake_v1.mjs",
-    "ciag:sales-e2e": "node scripts/ciag_sales_e2e_v1.mjs"
+    "ciag:sales-e2e": "node scripts/ciag_sales_e2e_v1.mjs",
+    "ciag:sales-funnel-e2e": "node scripts/ciag_sales_funnel_e2e_v1.mjs",
+    "ciag:sales-funnel-smoke": "node scripts/ciag_sales_funnel_smoke_v1.mjs",
+    "ciag:validate-manifest": "node scripts/ciag_validate_manifest_v1.mjs"
   }
 }
