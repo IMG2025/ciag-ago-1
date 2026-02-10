@@ -1,5 +1,26 @@
 #!/usr/bin/env node
 import fs from "fs";
+
+function safeJson(p) {
+  try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return null; }
+}
+
+function resolveLocationsForSlug(slug) {
+  // Primary: funnel prequal
+  const prequalPath = path.join("out", "reach", slug, "prequal.json");
+  const prequal = safeJson(prequalPath);
+  if (prequal && Number.isFinite(prequal.locations)) return prequal.locations;
+
+  // Secondary: if prequal uses a different key
+  if (prequal && Number.isFinite(prequal.reported_locations)) return prequal.reported_locations;
+
+  // Tertiary: triage memo / operator profile if present
+  const triageMeta = safeJson(path.join("docs", "triage", "TRG-" + slug, "pilot-intake.json"));
+  if (triageMeta && Number.isFinite(triageMeta.locations)) return triageMeta.locations;
+
+  return null;
+}
+
 import path from "path";
 
 const ROOT = process.cwd();
@@ -24,7 +45,11 @@ const runbook = `
 # CIAG Pilot Runbook
 
 **Operator:** ${op.operator_name} (${slug})  
-**Locations:** ${op.locations}  
+**Locations:** ${(() => {
+      const _loc = resolveLocationsForSlug(slug);
+      if (_loc === null) throw new Error("FAIL_CLOSED_LOCATIONS: Locations unresolved for slug=" + slug);
+      return _loc;
+    })()}  
 **Priority:** ${op.priority}  
 **Outreach Status:** ${op.outreach_status}  
 **Generated At:** ${now}
