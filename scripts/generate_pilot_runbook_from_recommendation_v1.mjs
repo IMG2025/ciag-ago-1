@@ -2,6 +2,42 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 
+function normalizePilotRunbookLocations(slug, outPath) {
+  try {
+    let md = fs.readFileSync(outPath, "utf8");
+    const loc = resolveLocationsFromArtifacts(slug);
+    if (md.includes("**Locations:** null")) {
+      md = md.replace("**Locations:** null", "**Locations:** " + String(loc ?? "unknown"));
+      fs.writeFileSync(outPath, md);
+    }
+  } catch {}
+}
+
+function resolveLocationsFromArtifacts(slug) {
+  // Preferred: funnel prequal output
+  try {
+    const pq = path.join("out", "reach", slug, "prequal.json");
+    if (fs.existsSync(pq)) {
+      const j = JSON.parse(fs.readFileSync(pq, "utf8"));
+      const n = j?.locations ?? j?.reported_locations ?? j?.reportedLocations;
+      if (Number.isFinite(n)) return n;
+    }
+  } catch {}
+
+  // Fallback: intake if generator has produced / stored one (best-effort)
+  try {
+    const intake = path.join("fixtures", "intake", slug + ".intake-response.json");
+    if (fs.existsSync(intake)) {
+      const j = JSON.parse(fs.readFileSync(intake, "utf8"));
+      const n = j?.operator?.locations ?? j?.locations;
+      if (Number.isFinite(n)) return n;
+    }
+  } catch {}
+
+  return null;
+}
+
+
 function resolveLocationsForSlug(slug) {
 const locations = resolveLocationsForSlug(slug);
   // Priority order:
