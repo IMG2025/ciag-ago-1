@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 /**
+ * DEPRECATED BY STEP 16E
+ * - Step 16C is now self-governing (it stages/commits/pushes itself)
+ * - This script remains for historical traceability only
+ */
+/**
  * Step 16D: Govern the cleanup patch (commit + push) and enforce clean tree
  * - Stages/commits the cleanup patch if untracked
  * - Ensures the previously-stray v1 patch is absent
