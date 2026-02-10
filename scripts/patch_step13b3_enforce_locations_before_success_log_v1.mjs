@@ -14,11 +14,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
 
-function run(cmd: string) { execSync(cmd, { stdio: "inherit" }); }
-function sh(cmd: string) { return execSync(cmd, { encoding: "utf8" }).trim(); }
-function exists(p: string) { return fs.existsSync(p); }
-function read(p: string) { return fs.readFileSync(p, "utf8"); }
-function writeIfChanged(p: string, next: string) {
+function run(cmd) { execSync(cmd, { stdio: "inherit" }); }
+function sh(cmd) { return execSync(cmd, { encoding: "utf8" }).trim(); }
+function exists(p) { return fs.existsSync(p); }
+function read(p) { return fs.readFileSync(p, "utf8"); }
+function writeIfChanged(p, next) {
   const prev = exists(p) ? read(p) : "";
   if (prev !== next) fs.writeFileSync(p, next);
 }
